@@ -1,5 +1,5 @@
 const Cookie = require('js-cookie')
-import mockStorge from '../src/utils/mockStorge'
+const mockStorge = require('./src/utils/mockStorge')
 
 let dataKey = mockStorge('AdminUsers', [
   {

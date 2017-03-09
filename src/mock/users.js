@@ -1,6 +1,6 @@
 const qs = require('qs')
 const Mock = require('mockjs')
-import mockStorge from '../src/utils/mockStorge'
+const mockStorge = require('../utils/mockStorge')
 
 let dataKey = mockStorge('UsersList', Mock.mock({
   'data|100': [

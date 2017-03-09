@@ -37,6 +37,7 @@
     "mockjs": "^1.0.1-beta3",
     "rc-tween-one": "^1.0.0",
     "redbox-react": "^1.2.10",
+    "roadhog": "^0.5.3",
     "robe-ajax": "^1.0.0",
     "watchjs": "^0.0.0"
   },
@@ -44,7 +45,9 @@
     "start": "dora --plugins \"proxy,webpack?publicPath=/,webpack-hmr,browser-history?index=/src/index.html\"",
     "dev": "dora --plugins \"webpack?publicPath=/,webpack-hmr,browser-history?index=/src/index.html\"",
     "lint": "eslint --fix --ext .js,.jsx src/components/layout",
-    "build": "atool-build"
+    "build": "atool-build",
+    "Rstart": "set PORT=3000&&roadhog server --no-open",
+    "Rbuild": "roadhog build"
   },
   "theme": "./src/theme.js",
   "standard": {
