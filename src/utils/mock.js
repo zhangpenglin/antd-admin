@@ -1,7 +1,5 @@
 const Mock = require('mockjs')
-const mockData = [require('../mock/app')]
-
-// const mockData = [require('../mock/users'), require('../mock/app'), require('../mock/dashboard')]
+const mockData = [require('../mock/users'), require('../mock/app'), require('../mock/dashboard')]
 
 function serialize (str) {
   let paramArray = str.split('&')
@@ -15,7 +13,7 @@ function serialize (str) {
 for (let i in mockData) {
   for (let key in mockData[i]) {
     Mock.mock(eval('/' + key.split(' ')[1].replace(/\//g, '\\\/') + '/'), key.split(' ')[0].toLowerCase(), function (options) {
-      if (key.split(' ')[0].toLowerCase() == 'get') {
+      if (key.split(' ')[0].toLowerCase() === 'get') {
         options.query = options.url.split('?')[1]
           ? serialize(options.url.split('?')[1])
           : (options.body
